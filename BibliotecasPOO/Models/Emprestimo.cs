@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BibliotecasPOO.Models
+namespace BibliotecasPOO.Models;
+
+internal class Emprestimo
 {
-    internal class Emprestimo
-    {
-    }
 }
