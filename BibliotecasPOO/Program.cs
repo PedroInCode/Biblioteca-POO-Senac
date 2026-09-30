@@ -1,9 +1,14 @@
-﻿namespace BibliotecasPOO;
+﻿using BibliotecasPOO.Models;
+
+namespace BibliotecasPOO;
+
 
 internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Material livro = new("Receitas de Bolo", ["Receitas", "Doces"], "Professor Luan");
+
+        livro.MostrarInformacoes();
     }
 }

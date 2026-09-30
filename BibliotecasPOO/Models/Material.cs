@@ -16,11 +16,20 @@ internal class Material
     public string Autor { get; set; }
     public List<string> Assuntos { get; set; }
 
-    public Material(string Titulo, string? autor = null)
+    public Material(string Titulo,List<string>assuntos, string? autor = null)
     {
         this._titulo = Titulo;
         this._autor = autor;
-        this._assuntos = new List<string>();
+        this._assuntos = assuntos;
+    }
+
+    public void MostrarInformacoes()
+    {
+        Console.WriteLine($"Titulo: {this._titulo}");
+        if (!string.IsNullOrEmpty(_autor))
+            Console.WriteLine($"Autor: {this._autor}");
+        
+        Console.WriteLine($"Assuntos: {string.Join(", ", _assuntos)}");
     }
 
     //Aplicar Filtros no Get e Set
