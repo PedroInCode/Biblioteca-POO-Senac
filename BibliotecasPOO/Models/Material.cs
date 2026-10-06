@@ -8,16 +8,16 @@ namespace BibliotecasPOO.Models;
 
 internal class Material
 {
-    private string _titulo;
-    private string? _autor;
-    private List<string> _assuntos;
+    protected string _titulo;
+    protected string? _autor;
+    protected List<string> _assuntos;
 
     //Aplicar Filtros no Get e Set
     //public string Titulo {  get { return this.titulo.ToUpper(); } set { this.titulo = value.ToUpper(); } }
 
-    public string Titulo { get; set; }
-    public string Autor { get; set; }
-    public List<string> Assuntos { get; set; }
+    public string Titulo { get => this._titulo; set => this._titulo = value; }
+    public string Autor { get => this._autor; set => this._autor = value; }
+    public List<string> Assuntos { get => this._assuntos; set => this._assuntos = value; }
 
     public Material(string Titulo,List<string>assuntos, string? autor = null)
     {
@@ -31,7 +31,7 @@ internal class Material
         Console.WriteLine($"Titulo: {this._titulo}");
         if (!string.IsNullOrEmpty(_autor))
             Console.WriteLine($"Autor: {this._autor}");
-        
+
         Console.WriteLine($"Assuntos: {string.Join(", ", _assuntos)}");
     }
 }
