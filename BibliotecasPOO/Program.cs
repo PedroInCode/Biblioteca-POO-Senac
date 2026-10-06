@@ -7,8 +7,8 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Material livro = new("Receitas de Bolo", ["Receitas", "Doces"], "Professor Luan");
 
-        livro.MostrarInformacoes();
+        Livro livro2 = new("Receitas de Bolo", ["Receitas", "Doces"], "Professor Luan", 300, "978-758975389");
+        livro2.MostrarInformacoes();
     }
 }

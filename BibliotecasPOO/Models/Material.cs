@@ -12,6 +12,9 @@ internal class Material
     private string? _autor;
     private List<string> _assuntos;
 
+    //Aplicar Filtros no Get e Set
+    //public string Titulo {  get { return this.titulo.ToUpper(); } set { this.titulo = value.ToUpper(); } }
+
     public string Titulo { get; set; }
     public string Autor { get; set; }
     public List<string> Assuntos { get; set; }
@@ -23,7 +26,7 @@ internal class Material
         this._assuntos = assuntos;
     }
 
-    public void MostrarInformacoes()
+    public virtual void MostrarInformacoes()
     {
         Console.WriteLine($"Titulo: {this._titulo}");
         if (!string.IsNullOrEmpty(_autor))
@@ -31,7 +34,4 @@ internal class Material
         
         Console.WriteLine($"Assuntos: {string.Join(", ", _assuntos)}");
     }
-
-    //Aplicar Filtros no Get e Set
-    //public string Titulo {  get { return this.titulo.ToUpper(); } set { this.titulo = value.ToUpper(); } }
 }
