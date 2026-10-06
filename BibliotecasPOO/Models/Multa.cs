@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace BibliotecasPOO.Models;
 
-internal class Usuario
+internal class Multa
 {
-    
+    private Emprestimo _emprestimo;
+    private decimal _valor;
+    private bool _paga;
 }

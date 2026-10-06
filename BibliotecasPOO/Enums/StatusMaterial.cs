@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BibliotecasPOO.Models;
+namespace BibliotecasPOO.Enums;
 
-internal class Usuario
+public enum StatusMaterial
 {
-    
+    Emprestado,
+    Devolvido
 }
