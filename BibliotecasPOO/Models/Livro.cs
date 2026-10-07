@@ -12,7 +12,16 @@ internal class Livro : Material
     private int _qtdPaginas;
 
     public string ISBN { get => this._isbn;  set => this._isbn = value; }
-    public int QuantidadePaginas { get => this._qtdPaginas; set => this._qtdPaginas = value; }
+    public int QuantidadePaginas
+    {
+        get => this._qtdPaginas;
+        set
+        {
+            if (value <= 0)
+                throw new ArgumentException("A quantidade de páginas deve ser maior que zero.");
+            this._qtdPaginas = value;
+        }
+    }
 
     public Livro( string Titulo, List<string> assuntos, string autor, int qtdPaginas, string isbn)
         : base(Titulo, assuntos, autor)

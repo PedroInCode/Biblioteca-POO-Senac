@@ -17,7 +17,7 @@ internal abstract class Material
     //Aplicar Filtros no Get e Set
     //public string Titulo {  get { return this.titulo.ToUpper(); } set { this.titulo = value.ToUpper(); } }
 
-    public string Titulo { get => this._titulo; set => this._titulo = value; }
+    public string Titulo { get => this._titulo.ToUpper(); set => this._titulo = value; }
     public string Autor { get => this._autor; set => this._autor = value; }
     public List<string> Assuntos { get => this._assuntos; set => this._assuntos = value; }
     public StatusMaterial StatusEmprestimo { get => this._statusEmprestimo; set => this._statusEmprestimo = value; }
